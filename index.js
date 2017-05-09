@@ -3,7 +3,6 @@ const http = require('http');
 const https = require('https');
 const express = require('express');
 const SocketIO = require('socket.io');
-const Url = require('url').URL;
 
 const HTTPS_PORT = 443;
 const HTTP_PORT = 80;
@@ -35,14 +34,11 @@ http.createServer(app).listen(HTTP_PORT);
 const httpsServer = https.createServer(sslOptions, app).listen(HTTPS_PORT);
 
 // tratamento do socket.io: usado para sinalização
-const ROOM_NAME = 'TESTE';
+const roomName = 'TDC2017';
 const sockets = new Map();
 const ioServer = SocketIO(httpsServer);
 ioServer.on('connection', socket => {
 
-    const myUrl = new Url(socket.request.headers.referer);
-    const pathname = myUrl.pathname.split('/');
-    const roomName = pathname.pop();
     console.log(`usuário com id ${socket.id} entrou na sala ${roomName}`);
 
     socket.on('peerOffer', offer => {
