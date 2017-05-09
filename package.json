@@ -1,0 +1,14 @@
+{
+  "name": "TDC2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Digitro/TDC2017.git",
+  "author": "Douglas Amorim Ferreira <douglaseel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.1",
+    "socket.io-client": "^2.0.1",
+    "webrtc-adapter": "^3.3.4"
+  }
+}

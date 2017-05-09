@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+button {
+    margin-bottom: 0.5rem;
+}
+
+.view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
